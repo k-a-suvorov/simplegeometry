@@ -2,7 +2,7 @@
 import mathdefs as md
 try:
 	#Initialize block
-	print('Calculate the areas of different figures')
+	print('Calculate an areas of different figures')
 	
 	switch = True
 	choice = int(input('Press 1 for triangle, \r\n2 for rectangle, \r\n3 for ellipse, \r\n4 for Parallelogram, \r\n5 for trapeze, \r\n6 for sphere, \r\n7 for cylinder \r\n>>> '))
