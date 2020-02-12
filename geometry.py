@@ -6,17 +6,17 @@ try:
 	print('Calculate an areas of different figures')
 	
 	switch = True
-	choice = int(input('Press 1 for triangle, \r\n2 for rectangle, \r\n3 for ellipse, \r\n4 for Parallelogram, \r\n5 for trapeze, \r\n6 for sphere, \r\n7 for cylinder \r\n>>> '))
+	choice = int(input('Press 1 for triangle, \r\n2 for rectangle, \r\n3 for ellipse, \r\n4 for Parallelogram, \r\n5 for trapeze, \r\n6 for sphere, \r\n7 for cylinder, \r\n8 for cube \r\n>>> '))
 	
-	if ((choice < 1) and (choice > 7)):
+	if ((choice < 1) and (choice > 8)):
 		print('The proram was aborted!')
 		switch = False
 		
 	elif (choice == 1):
 		
 		#Initialize block
-		a = input('Insert footing of Triangle: ')
-		h = input('Insert height of Triangle: ')
+		a = input('Insert footing of triangle: ')
+		h = input('Insert height of triangle: ')
 		
 		#Processing block
 		a = float(a)
@@ -33,8 +33,8 @@ try:
 	elif (choice == 2):
 		
 		#Initialize block
-		a = input('Insert width of Rectangle: ')
-		b = input('Insert height of Rectangle: ')
+		a = input('Insert width of rectangle: ')
+		b = input('Insert height of rectangle: ')
 		
 		#Processing block
 		a = float(a)
@@ -51,8 +51,8 @@ try:
 	elif (choice == 3):
 		
 		#Initialize block
-		r1 = input('Insert 1th radius of Ellipse: ')
-		r2 = input('Insert 2th radius of Ellipse: ')
+		r1 = input('Insert 1th radius of ellipse: ')
+		r2 = input('Insert 2th radius of ellipse: ')
 		
 		#Processing block
 		r1 = float(r1)
@@ -64,13 +64,13 @@ try:
 		result_ellipse = md.area_ellipse(r1, r2)
 		
 		#Print block
-		print(f'The area of the rectangle: {result_ellipse}')
+		print(f'The area of the ellipse: {result_ellipse}')
 	
 	elif (choice == 4):
 		
 		#Initialize block
-		a = input('Insert width of Parallelogram: ')
-		h = input('Insert height of Parallelogram: ')
+		a = input('Insert width of parallelogram: ')
+		h = input('Insert height of parallelogram: ')
 		
 		#Processing block
 		a = float(a)
@@ -106,7 +106,7 @@ try:
 		result_trapeze = md.area_trapeze(a, b, h)
 		
 		#Print block
-		print(f'The area of the rtrapeze: {result_trapeze}')
+		print(f'The area of the trapeze: {result_trapeze}')
 	
 	elif (choice == 6):
 		
@@ -141,7 +141,22 @@ try:
 		
 		#Print block
 		print(f'The area of the sphere: {result_sphere}')
-
+	
+	elif (choice == 8):	
+		
+		#Initialize block
+		a = input('Insert width of cube: ')
+		
+		#Processing block
+		a = float(a)
+		if ((a == 0) or (a < 0)):
+			print('The proram was aborted!')
+			switch = False		
+			
+		result_cube = md.area_cube(a)
+		
+		#Print block
+		print(f'The area of the sphere: {result_cube}')
 
 except ZeroDivisionError:
     print('On zero share cannot be!')		

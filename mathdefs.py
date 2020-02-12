@@ -39,3 +39,8 @@ def area_cylinder(r, h):
 def area_sphere(r):
 	s = round((4 * math.pi) * (r * r), 2)
 	return s
+
+#An area of the cube
+def area_cube(a):
+	s = 6 * (a * a)
+	return s
