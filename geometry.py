@@ -1,3 +1,4 @@
+#usr/bin/python3
 #inport the module of the user math functions
 import mathdefs as md
 try:
@@ -140,7 +141,10 @@ try:
 		
 		#Print block
 		print(f'The area of the sphere: {result_sphere}')
-		
+
+
+except ZeroDivisionError:
+    print('On zero share cannot be!')		
 except ValueError:
     print("You have some mistake of userinput Value")
 except TypeError:

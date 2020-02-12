@@ -4,7 +4,7 @@ import random
 #Processing block
 
 #math fanctions of areas of the geometrical figure
-
+#usr/bin/python3
 #An Area of the triangle
 def area_triangle(a, h):
 	s = (1 / 2) * (a * h)
