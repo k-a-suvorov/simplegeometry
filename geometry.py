@@ -1,6 +1,8 @@
 #usr/bin/python3
 #inport the module of the user math functions
 import mathdefs as md
+import os
+
 try:
 	#Initialize block
 	print('Calculate an areas of different figures')
@@ -12,151 +14,37 @@ try:
 		print('The proram was aborted!')
 		switch = False
 		
-	elif (choice == 1):
+	elif (choice == 1): #Load Triangle module
 		
-		#Initialize block
-		a = input('Insert footing of triangle: ')
-		h = input('Insert height of triangle: ')
-		
-		#Processing block
-		a = float(a)
-		h = float(h)		
-		if ((a == 0) or (h == 0) or (a < 0) or (h < 0)):
-			print('The proram was aborted!')
-			switch = False
-			
-		result_triangle = md.area_triangle(a, h)
-		
-		#Print block
-		print(f'The area of the triangle: {result_triangle}')
+		os.system('python triangle.py')
 	
-	elif (choice == 2):
+	elif (choice == 2): #Load Rectangle module
 		
-		#Initialize block
-		a = input('Insert width of rectangle: ')
-		b = input('Insert height of rectangle: ')
-		
-		#Processing block
-		a = float(a)
-		b = float(b)
-		if ((a == 0) or (b == 0) or (a < 0) or (b < 0)):
-			print('The proram was aborted!')
-			switch = False
-			
-		result_rectangle = md.area_rectangle(a, b)
-		
-		#Print block
-		print(f'The area of the rectangle: {result_rectangle}')
+		os.system('python rectangle.py')
 	
-	elif (choice == 3):
+	elif (choice == 3): #Load Ellipse module
 		
-		#Initialize block
-		r1 = input('Insert 1th radius of ellipse: ')
-		r2 = input('Insert 2th radius of ellipse: ')
-		
-		#Processing block
-		r1 = float(r1)
-		r2 = float(r2)
-		if ((r1 == 0) or (r2 == 0) or (r1 < 0) or (r2 < 0)):
-			print('The proram was aborted!')
-			switch = False
-			
-		result_ellipse = md.area_ellipse(r1, r2)
-		
-		#Print block
-		print(f'The area of the ellipse: {result_ellipse}')
+		os.system('python ellipse.py')
 	
-	elif (choice == 4):
+	elif (choice == 4): #Load Parallelogram module
 		
-		#Initialize block
-		a = input('Insert width of parallelogram: ')
-		h = input('Insert height of parallelogram: ')
-		
-		#Processing block
-		a = float(a)
-		h = float(h)
-		
-		if ((a == 0) or (h == 0) or (a < 0) or (h < 0)):
-			print('The proram was aborted!')
-			switch = False
-			
-		result_parallelogram = md.area_parallelogram(a, h)
-		print(f'The area of the rectangle: {result_parallelogram}')
+		os.system('python parallelogram.py')
 	
-	elif (choice == 5):
+	elif (choice == 5): #Load Trapeze module
 		
-		#Initialize block
-		a = input('Insert width of Trapeze: ')
-		b = input('Insert width of Trapeze: ')
-		h = input('Insert height of Trapeze: ')
-		
-		#Processing block
-		a = float(a)
-		b = float(b)
-		h = float(h)
-		if ((a == 0) or (b == 0) or (h == 0)):
-			
-			print('The proram was aborted!')
-			switch = False
-			
-		if ((a < 0) or (h < 0) or (b < 0)):
-			print('The proram was aborted!')
-			switch = False	
-			
-		result_trapeze = md.area_trapeze(a, b, h)
-		
-		#Print block
-		print(f'The area of the trapeze: {result_trapeze}')
+		os.system('python trapeze.py')
 	
-	elif (choice == 6):
+	elif (choice == 6): #Load Cylinder module
 		
-		#Initialize block
-		r = input('Insert radius of cylinder: ')
-		h = input('Insert height of cylinder: ')
-		
-		#Processing block
-		r = float(r)
-		h = float(h)
-		if ((r == 0) or (h == 0) or (r < 0) or (h < 0)):
-			print('The proram was aborted!')
-			switch = False
-			
-		result_cylinder = md.area_cylinder(r, h)
-		
-		#Print block
-		print(f'The area of the cylinder: {result_cylinder}')
+		os.system('python cylinder.py')
 	
-	elif (choice == 7):	
+	elif (choice == 7):	#Load Sphere module
 		
-		#Initialize block
-		r = input('Insert radius of sphere: ')
-		
-		#Processing block
-		r = float(r)
-		if ((r == 0) or (r < 0)):
-			print('The proram was aborted!')
-			switch = False		
-			
-		result_sphere = md.area_sphere(r)
-		
-		#Print block
-		print(f'The area of the sphere: {result_sphere}')
+		os.system('python sphere.py')
 	
-	elif (choice == 8):	
+	elif (choice == 8):	#Load Cube module
 		
-		#Initialize block
-		a = input('Insert width of cube: ')
-		
-		#Processing block
-		a = float(a)
-		if ((a == 0) or (a < 0)):
-			print('The proram was aborted!')
-			switch = False		
-			
-		result_cube = md.area_cube(a)
-		
-		#Print block
-		print(f'The area of the sphere: {result_cube}')
+		os.system('python cube.py')
 
 except ZeroDivisionError:
     print('On zero share cannot be!')		
